@@ -13,13 +13,13 @@
     <link rel="icon" href="./styles/favicon.ico" />
   </head>
 
-  <body>
+  <body class="back-ground-color">
     <header>
       <h1>Journal Entries</h1>
       <img src="./styles/settings.svg" alt="settings" width="40" height="40" />
     </header>
 
-    <main class="double-column"></main>
+    <main></main>
 
     <entry-page></entry-page>
 
@@ -52,13 +52,13 @@
 
         client.on(client.Event.SDK_READY, function () {
           // We will write the following code here
-          var treatment = client.getTreatment("lab10");
-          let mainPane = document.querySelector("main");
+          var treatment = client.getTreatment("lab10-darkmode");
+          let mainPane = document.querySelector("body");
 
           if (treatment === "on") {
-            mainPane.classList.add("double-column");
+            mainPane.classList.add("back-ground-color");
           } else if (treatment === "off") {
-            mainPane.classList.remove("double-column");
+            mainPane.classList.remove("back-ground-color");
           } else {
             // Insert code for control treatment
           }
